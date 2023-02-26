@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>Freelance Web Development</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/f8d50cbe91.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init("GGimt4Uzyq8T5Zhzn");
+    })();
+    </script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <nav>
+        <img class="personal__logo" src="./assets/logo.png" />
+        
+        <ul class="nav__link--list">
+           
+            <li class="nav__link">
+                <a href="#services" class="
+                nav__link--anchor
+                link__hover-effect
+                ">Services</a> 
+            </li>
+            <li class="nav__link">
+                <a href="#contact" class="
+                nav__link--anchor
+                nav__link--anchor-primary
+                " onclick="toggleModal()">Contact</a> 
+            </li>
+            <li class="nav__link" onclick="toggleContrast()">
+                <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                "><i class="fa fa-circle-half-stroke"></i></a> 
+            </li>
+        </ul>
+    </nav>
+    <main>
+       <a href="#">
+           <button class="btn__mail click" onclick="toggleModal()"><i class="fa fa-envelope btn__mail--white"></i></button>
+       </a> 
+        <section id="hero" class="felx flex-1">
+            <div class="hero__info row"> 
+                <div class="hero__info--container">
+                  
+                    <h1 class="hero__info--title">
+                        Custom Web Designs
+                    </h1>
+                    <p class="hero__info--para">Get your vision custom made for your business needs.  Whether you need a simple brand website, E-Commerce shop, or a personality blog - We've got you covered. <b class="text--accent click" onclick="toggleModal()">Let's Chat</b> </p>
+                </div>
+                <div class="hero__links flex">
+                    <a href="https://www.facebook.com/ChrisHayesFreelancer" class="hero__link" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hero__link" onclick="toggleModal()"> <i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <a href="#services" class="scroll">
+                <div class="scroll__icon click"></div>
+              </a>
+              <div class="modal">
+                <div class="modal__half modal__about">
+                    <h3 class="modal__title modal__title--about">Let us know</h3>
+                    <h4 class="modal__subitle modal__subtitle--about">the details about what you are looking for.</h4>
+                    <p class="modal__para">Please include what type of site you are looking for, a little about your timeline, budget restrictions, general project info to help for our first conneciton.</p>
+                    <p class="modal__para">We are <b class="text--accent">constantly learning </b> and working with small businesses and individuals with <b class="text--accent">clever design and experience </b> to make your business stand out.</p>
+                    <div class="language__list">
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/html5.png" alt="HTML5 Icon" class="language__img">
+                            </figure>
+                                <span class="language__name">HTML 5</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/css3.png" alt="CSS3 Icon" class="language__img">
+                            </figure>
+                            <span class="language__name">CSS 3</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/js.png" alt="Javascript Icon" class="language__img">
+                            </figure>
+                            <span class="language__name">Javascript</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/react.png" alt="React Icon" class="language__img">
+                            </figure>
+                            <span class="language__name">React</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/ruby.png" alt="Ruby Icon" class="language__img">
+                            </figure>
+                            <span class="language__name">Ruby</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/rails.png" alt="Ruby on Rails Icon" class="language__img">
+                            </figure>
+                            <span class="language__name">Ruby on Rails</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__half modal__contact">
+                    <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+
+                    <h3 class="modal__title modal__title--contact"> Let's Chat</h3>
+                    <h4 class="modal__subitle modal__subtitle--contact">We're currently open to new clients.</h4>
+                    <form id="contact__form" onsubmit="contact(event)">
+                        <div class="form__item">
+                            <label class="form__item--label">Name</label>
+                            <input class="input" name="user_name" type="text" required></input>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__item--label">Email</label>
+                            <input class="input" name="user_email" type="email" required></input>
+                          </div>
+                          <div class="form__item">
+                            <label class="form__item--label">Message</label>
+                            <textarea class="input" name="message" type="text" required></textarea>
+                          </div>
+                          <button id="contact__submit" class="form__submit">
+                            Send it my way
+                          </button>
+                    </form>
+                    <div class="modal__overlay modal__overlay--loading">
+                        <i class="fas fa-spinner logo--white"></i>
+                    </div>
+                    <div class="modal__overlay modal__overlay--success">
+                        Thanks for reaching out.  I look forward to talking with you soon!
+                    </div>
+
+                </div>
+              </div>
+
+        </section>
+        
+        <section class="flex services" id="services">
+            <div class="container flex">
+                <div class="width-50">
+                    <p>You never know where someone is going to find your website. </p>
+                    <p>More and more web traffic is coming from mobile, but B2B traffic is often from Tablet or Desktop sizes.</p>
+                    <p>In today's world having responsive website that is compatible across devices for an optimal experience no matter what platform you are on is essential for your potential customers.</p>
+                    <h3> That's why this comes <span class="text--accent"> STANDARD</span> with all of our websites.</h3>
+                    <a href="#top" class="
+                    nav__link--anchor
+                    nav__link--anchor-primary
+                    " onclick="toggleModal()">Contact</a> 
+                </div>
+                <div class="width-50">
+                    <img class="services__img" src="./assets/responsiveDesign.png">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section__title">Previous Customer are talking...</h1>
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial__card">
+                        <div class="testimonial__card--wrapper">
+                            <div class="testimonial__card--img">
+                                <img src="./assets/Kayla.png" alt="Customer Image">
+                            </div>
+                            <div class="testimonial__card--content">
+                                <h3 class="testimonial__card--title">Kayla</h3>
+                                <h4 class="testimonial__card--subtitle">Entrepreneur</h4>
+                                <p class="testimonial__card--para">They were able to get me everything I wanted in my website.  They were able to connect my e-commerce to its own patform which helped my sales to grow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__card">
+                        <div class="testimonial__card--wrapper">
+                            <div class="testimonial__card--img">
+                                <img src="./assets/amanda.png" alt="Customer Image">
+                            </div>
+                            <div class="testimonial__card--content">
+                                <h3 class="testimonial__card--title">Amanda</h3>
+                                <h4 class="testimonial__card--subtitle">CEO</h4>
+                                <p class="testimonial__card--para">They built my new business's website which funneled large numbers of people into our brick and mortar bakery. The articles were written with SEO and location in mind too. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__card">
+                        <div class="testimonial__card--wrapper">
+                            <div class="testimonial__card--img">
+                                <img src="./assets/Brian.png" alt="Customer Image">
+                            </div>
+                            <div class="testimonial__card--content">
+                                <h3 class="testimonial__card--title">Brian</h3>
+                                <h4 class="testimonial__card--subtitle">Insurance</h4>
+                                <p class="testimonial__card--para">Working with Chris was one of the best tech experiences I've had.  He listened to our needs and didn't try to upsell us something we didn't need.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="service__icons">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section__title">What we offer</h1>
+                </div>
+                <div class="service__card--row">
+                    <div class="service__card">
+                        <div class="service__card--wrapper">
+                            <div class="service__card--img">
+                                <img src="./assets/responsive.png" alt="Website Icon">
+                            </div>
+                            <div class="service__card--content">
+                                <h3 class="service__card--title">Website Design</h3>
+                                <p class="service__card--para">We build websites that are responsive and compatible across all devices.  We also build websites that are optimized for SEO and are easy to navigate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service__card">
+                        <div class="service__card--wrapper">
+                            <div class="service__card--img">
+                                <img src="./assets/search.png" alt="SEO Icon">
+                            </div>
+                            <div class="service__card--content">
+                                <h3 class="service__card--title">SEO</h3>
+                                <p class="service__card--para">
+                                    Writing articles that are optimized for SEO is a great way to get your website to the top of the search engines.  We can help you with that.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service__card">
+                        <div class="service__card--wrapper">
+                            <div class="service__card--img">
+                                <img src="./assets/cart.png" alt="Ecommerce Icon">
+                            </div>
+                            <div class="service__card--content">
+                                <h3 class="service__card--title">Ecommerce</h3>
+                                <p class="service__card--para">E-commerce is growing every single day.  Having your products on a website you control without additional fees is a great way to grow your business and reach your customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="row">
+            <a href="#" class="footer__anchor">
+                <figure>
+                    <img src="./assets/logo.png" alt="Chris Hayes Freelance Logo" class="logo--white">
+                </figure>
+                <span class="footer__anchor--popper">
+                    Top
+                    <i class="fas fa-arrow-up"></i>
+                </span>
+            </a>
+            <div class="footer__social--list">
+                <a href="https://www.github.com/c-hayes" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                target="_blank"
+                >Github</a>
+           
+                <a href="https://www.linkedin.com/in/chris-hayes-a3372a158/" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                target="_blank"
+                >LinkedIn</a>
+           
+                <a href="mailto:chayes.editing@gmail.com" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                target="_blank"
+                >Email</a>
+           
+                <a href="#" onclick="toggleModal()" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white"
+                >Contact</a>
+            </div>
+            <p>Copyright ©2022 Chris Hayes</p>
+        </div>
+    </footer>
+
+</body>
+</html>
