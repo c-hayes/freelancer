@@ -47,6 +47,10 @@ p {
 .flex-1 {
   flex: 1;
 }
+.space-between{
+  justify-content: space-around;
+  align-items: center;
+}
 .row {
   width: 100%;
   max-width: 800px;
@@ -56,6 +60,7 @@ p {
 
 .container {
   padding: 50px 0;
+  width: 100%;
   max-width: 1400px;
 }
 .section {
@@ -923,6 +928,7 @@ footer p,
   }
   .container{
     padding: 0 20px;
+
     flex-wrap: wrap;
   }
   .personal__logo {
