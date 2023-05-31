@@ -1,9 +1,8 @@
-// template_soofpy8
-// service_o3qlhbk
-// key GGimt4Uzyq8T5Zhzn
+// template_bcgz8aw
+// service_5krgatp
+// key jECY0IM7sQ262RF4z5fh7
 
-// advanced JS portfolio 2:00 timestamp
-// addressed in Discord JS channel 11/12/22 around 1:30pm
+// Emailjs.com
 
 
 function contact(event) {
@@ -11,12 +10,11 @@ function contact(event) {
     const loading = document.querySelector(".modal__overlay--loading");
     const success = document.querySelector(".modal__overlay--success");
     loading.classList += " modal__overlay--visible";
-    emailjs
-      .sendForm(
-            'service_o3qlhbk',
-            'template_soofpy8',
+    emailjs.sendForm(
+            'service_5krgatp',
+            'template_bcgz8aw',
             event.target,
-            'GGimt4Uzyq8T5Zhzn'
+            'jECY0IM7sQ262RF4z5fh7'
       )
       .then(() => {
         loading.classList.remove("modal__overlay--visible");
@@ -25,7 +23,7 @@ function contact(event) {
       .catch(() => {
         loading.classList.remove("modal__overlay--visible");
         alert(
-          "The email service is temporarily unavailable. Please contact me directly on chayes.editing@ gmail(dot)com"
+          "The email service is temporarily unavailable. Please contact us directly at phconstruction@sbcglobal.net"
         );
       });
   }
