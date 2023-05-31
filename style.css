@@ -736,7 +736,7 @@ height: 300px;
   padding: 20px;
   margin: 0 auto;
   width: calc(100vw / 3);
-  max-width: 300px;
+  max-width: 500px;
   height: 300px;
   text-align: center;
 }
@@ -801,13 +801,13 @@ height: 300px;
   left: 0;
   padding: 10px;
   transform: translateY(100%);
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   z-index: 3;
   opacity: 0;
   background-color: var(--accent-color);
   box-shadow: 0 40px 30px rgba(252, 127, 44, 0.5), 0 -40px 30px rgba(252, 127, 44, 0.5);
-
+  font-size: var(--font-med);
   transition: transform 450ms, opacity 500ms ease;
 }
 
