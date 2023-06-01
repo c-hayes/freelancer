@@ -1,6 +1,7 @@
-// template_2e4ixts
+// template_kualxif
 // service_5krgatp
 // private-key jECY0IM7sQ262RF4z5fh7
+// public-key qFmLqTmUSlAis_HgQ
 // Emailjs.com
 
 function contact(event) {
@@ -11,9 +12,9 @@ function contact(event) {
   emailjs
   .sendForm(
         'service_5krgatp',
-        'template_2e4ixts',
+        'template_kualxif',
         event.target,
-        'jECY0IM7sQ262RF4z5fh7'
+        'qFmLqTmUSlAis_HgQ'
   )
   .then(() => {
     loading.classList.remove("modal__overlay--visible");
